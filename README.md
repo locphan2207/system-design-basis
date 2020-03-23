@@ -18,7 +18,6 @@ A system can only guarantee either consistency or availability.
 
 ### DNS (Domain Name System):
 
-
 ### Load Balancer:
 - Help distribute incoming traffic.
 - Avoid unhealthy servers
@@ -63,6 +62,16 @@ A system can only guarantee either consistency or availability.
 ### Indexes:
 - Useful to increase read performance, but reduces write performance because it has to update indexes 
 - Usually means keep data sorted with keys and store the pointers to the beginning section of each key for fast access.
+
+### Consistent Hasing:
+- Good for distributed caching system and distributed horizontal tables
+- Minimize reorginization when a node is added or removed 
+
+### Message queue:
+- Used for asynchronism
+- Store incoming requests in to a buffer so traffic is not blocked.
+- While request is in queue, notify client about its status.
+- Dequeue each request to the server and sends back response when done. 
 
 ### SQL vs NoSQL:
 1. SQL (Relational db):
